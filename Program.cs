@@ -1,18 +1,25 @@
 ﻿using System.Text;
 
-namespace Bai2
+namespace Bai8
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            TimSLN sln = new TimSLN();
-            int n;
-            Console.Write("Nhập n = ");
-            n = sln.NhapMotSo();
-            Console.WriteLine("Số lớn nhất trong {0} vừa nhập là {1} ", n, sln.TimMax(n));
-            Console.ReadLine();
+            PTBacHai pt1 = new PTBacHai(); // mặc định 1x^2 = 0
+            pt1.HienThi();
+
+            Console.WriteLine("==============");
+
+            PTBacHai pt2 = new PTBacHai(1, -3, 2); // x^2 - 3x + 2 = 0
+            pt2.HienThi();
+
+            Console.WriteLine("==============");
+
+            PTBacHai pt3 = new PTBacHai(0, 2, -4); // bậc nhất: 2x - 4 = 0
+            pt3.HienThi();
         }
     }
+
 }
